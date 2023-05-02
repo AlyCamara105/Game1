@@ -18,4 +18,4 @@ jobs:
     - name: Build place file
       run: rojo build -o game.rbxl
     - name: Publish place
-      run: rbxcloud experience publish -f game.rbxl -p vars.S_PLACEID -u vars.S_GAMEID -t published -a ${{ secrets.API_KEY }}
+      run: rbxcloud experience publish -f game.rbxl -p ${{ vars.S_PLACEID }} -u ${{ vars.S_GAMEID }} -t published -a ${{ secrets.API_KEY }}
